@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 # launch browser
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 
 # Open Webpage
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
