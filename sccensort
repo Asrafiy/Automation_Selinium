@@ -8,7 +8,9 @@ def capture_screenshot():
     driver.maximize_window()
     driver.get("http://google.com")
 
-    driver.get_screenshot_as_file("./Screenshots_image/Goggle.png")
+    driver.get_screenshot_as_file("./Screenshots_image/Goggle.png"
+    #full page sceensort
+   # driver.save_full_page_sceensort("./Screenshots_image/orangehrmlivei.png")
 
     driver.close()
 
