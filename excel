@@ -1,0 +1,15 @@
+import openpyxl
+
+def get_row_count(file, sheet):
+    workbook = openpyxl.load_workbook(file)
+    worksheet = workbook.get_sheet_by_name(sheet)
+    return worksheet.max_row
+
+row_count = get_row_count("C:\\Users\\darus\\PycharmProjects\\pythonProject5\\Framwork\\Data\\test_data.xlsx" ,"Sheet1")
+print(row_count)
+def get_column_count(file, sheet):
+    workbook = openpyxl.load_workbook(file)
+    worksheet = workbook.get_sheet_by_name(sheet)
+    return worksheet.max_column
+column_count = get_column_count("C:\\Users\\darus\\PycharmProjects\\pythonProject5\\Framwork\\Data\\test_data.xlsx" ,"Sheet1")
+print(column_count)
