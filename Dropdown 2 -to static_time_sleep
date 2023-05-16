@@ -1,0 +1,27 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
+
+
+def select_dropdown():
+    # Step 1: launch browser
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+# Step 2: Open Webpage
+    driver.get("https://the-internet.herokuapp.com/dropdown")
+
+    dropdown = driver.find_element(By.ID, "dropdown")
+
+    dropdown_options = Select(dropdown)
+    #for index
+    #dropdown_options.select_by_index(1)
+    #for value
+    #dropdown_options.select_by_value("2")
+    #time.sleep(2)
+    dropdown_options.select_by_visible_text("Option 2")
+    time.sleep(2)
+select_dropdown()
